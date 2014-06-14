@@ -1,0 +1,20 @@
+<h1>Upload an Image</h1>
+
+{{view "fileUpload" name="image" file=image }}
+
+<form>
+  <div>
+    <label for='blur'>Blur</label>
+    {{input name='blur' value=blur}}
+  </div>
+  <div>
+    <label for='opacity'>Opacity</label>
+    {{input name='opacity' value=opacity}}
+  </div>
+  <div>
+    <label for='grayscale'>Grayscale</label>
+    {{input name='grayscale' value=grayscale}}
+  </div>
+</form>
+
+<img {{bind-attr src=image style=computedStyle}}>
